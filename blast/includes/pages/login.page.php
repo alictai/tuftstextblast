@@ -15,7 +15,19 @@ class LoginPage extends Page {
 		global $db;
 ?>
 
-this is the login page
+	<br/><br/><br/><br/><br/><br/><br/>
+	<h1 id="login_header">Tufts Text Blast</h1>
+	<h4>Fall Hackthon 2013</h4>
+	<br/>
+	<div id="login_form">
+		<form>
+			Username: <input type="text" name="firstname">
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			Password: <input type="password" name="lastname"><br/><br/>
+			<!--<input type="submit" value="Login">-->
+			<p id="fake_login"><a href="?p=dashboard">Login</a></p>
+		</form>
+	</div>
 
 
 <?php

@@ -9,7 +9,7 @@ class Messages {
 	
 	public function __construct() {
 		
-		$this->Twillio = new Services_Twilio($this->Tw_AccountSid, $this->Tw_AuthToken);
+		//$this->Twillio = new Services_Twilio($this->Tw_AccountSid, $this->Tw_AuthToken);
 		
 	}
 	
@@ -28,9 +28,10 @@ class Messages {
 		$from_r = $db->select("SELECT phone FROM organizations where org_id = '{$org_id}';");
 		$from = $from_r['phone'];
 
-		$members = $db->select("SELECT members.phone FROM members WHERE listlink.list_id = {$list_id} LEFT OUTER JOIN listlink ON (listlink.member_id = member.id);");
+		$members = $db->select("SELECT members.phone,members.phone_email FROM members WHERE listlink.list_id = {$list_id} LEFT OUTER JOIN listlink ON (listlink.member_id = member.id);");
 		foreach($members as $member) {
-			$client->account->messages->sendMessage($from, $member['phone'], $message);
+			//$client->account->messages->sendMessage($from, $member['phone'], $message);
+			//mail($member->email, , $message)
 		}
 		$this->store_message($message);
 	}

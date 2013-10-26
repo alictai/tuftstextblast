@@ -47,11 +47,18 @@ class Member {
 	}
 	
 	public function get_members($org_id) {
-		return $db->select("SELECT id,name FROM members WHERE organization_id='{$org_id}';");
+		global $db;
+		return $db->select("SELECT id,name,phone FROM members WHERE organization_id='{$org_id}';");
 	}
+	
+	public function get_list_of_member($member_id) {
+		global $db;
+		return $db->select("SELECT listlink.id,lists.name FROM lists LEFT OUTER JOIN listlink ON (listlink.list_id = lists.id) WHERE listlink.member_id='{$member_id}';");
+	}
+	
 	
 }
 
-$member = new Member();
+$members = new Member();
 
 ?>

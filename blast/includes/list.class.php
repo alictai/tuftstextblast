@@ -41,16 +41,18 @@ class MemberList {
 	}
 	
 	public function get_lists($org_id) {
+		global $db;
 		return $db->select("SELECT id,name FROM lists WHERE organization_id='{$org_id}';");
 	}
 	
 	public function get_members_of_list($list_id) {
 		// this sql statement might not work
+		global $db;
 		return $db->select("SELECT members.id,members.name FROM members WHERE listlink.list_id='{list_id}' LEFT OUTER JOIN listlink ON (listlink.member_id = member.id);");
 	}
 	
 }
 
-$list = new MemberList();
+$lists = new MemberList();
 
 ?>

@@ -70,6 +70,8 @@ class PageAction {
 		
 		if (!isSet($_COOKIE['org_id'])) {
 			header('Location: '.SITEPATH.'/?p=login&msg=authreq');
+		} else {
+			define('ORG_ID', intval($_COOKIE['org_id']));
 		}
 		
 	}

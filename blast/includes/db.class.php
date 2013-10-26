@@ -11,22 +11,23 @@ class Database {
 		
 		// Ensure Connection Constants are Defined
 		if (!defined('DB_HOST')) { 
-			System::CriticalError('100', 'Undefined Database Host');
+//			System::CriticalError('100', 'Undefined Database Host');
 		}
 		if (!defined('DB_USER')) { 
-			System::CriticalError('101', 'Undefined Database Username');
+//			System::CriticalError('101', 'Undefined Database Username');
 		}
 		if (!defined('DB_PASSWORD')) { 
-			System::CriticalError('102', 'Undefined Database Password');
+//			System::CriticalError('102', 'Undefined Database Password');
 		}
 		if (!defined('DB_NAME')) { 
-			System::CriticalError('103', 'Undefined Database Name');
+//			System::CriticalError('103', 'Undefined Database Name');
 		}
 		
 		// Instantiate Database Object or Produce Error
 		$this->mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 		if ($this->mysqli->connect_error) {			
-			System::CriticalError('104', 'Database Connection Error ('.$this->mysqli->connect_errno . ') '.$this->mysqli->connect_error);
+			die('db error');
+//			System::CriticalError('104', 'Database Connection Error ('.$this->mysqli->connect_errno . ') '.$this->mysqli->connect_error);
 		}
 		
 	}
@@ -288,7 +289,7 @@ class Database {
 	
 }
 
-
+$db = new Database();
 
 
 ?>
