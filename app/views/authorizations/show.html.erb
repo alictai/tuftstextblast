@@ -1,0 +1,4 @@
+<% title 'Welcome' %>  
+<h2>Hello <%=h @authorization.login %></h2>  
+  
+<%= link_to 'Logout', authorization_session_path, :method => :delete %>

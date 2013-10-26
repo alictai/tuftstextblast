@@ -1,0 +1,2 @@
+module AuthorizationSessionHelper
+end
