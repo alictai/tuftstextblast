@@ -12,22 +12,63 @@
 			<div class="colleft">
 				<div class="col1">
 					<!-- COLUMN 1 START [CENTER]-->
-					<h3 class="yellow">MESSAGES</h3>
-					<p>Put a bird on it cardigan mlkshk, trust fund Helvetica retro tofu drinking vinegar chambray asymmetrical Carles Truffaut banh mi cliche. Mumblecore semiotics street art blog viral. Jean shorts master cleanse mustache, flannel selvage tattooed slow-carb kitsch skateboard. Aesthetic occupy photo booth, Helvetica craft beer mlkshk sustainable Blue Bottle post-ironic squid. Fingerstache keffiyeh meggings pour-over kogi, art party 8-bit occupy readymade craft beer. Cred messenger bag dreamcatcher, 90's Intelligentsia whatever shabby chic cray. Direct trade 90's authentic drinking vinegar, +1 flannel art party fanny pack mlkshk ugh you probably haven't heard of them squid Banksy occupy asymmetrical.</p>
+					<h3 class="yellow">SENT MESSAGES</h3>
+					<div id="sent_messages"></div>
+					<ul>
+						<li class="message">
+							<p class="title">Message</p>
+							<p class="body">Polaroid Schlitz VHS narwhal PBR, blog Pitchfork XOXO pickled brunch High Life. Ethnic food truck squid flexitarian cray Tonx, Marfa narwhal Odd Future gentrify typewriter ugh irony. Brunch leggings pug Echo Park, Vice 8-bit paleo Bushwick chia food truck. Sustainable Tumblr Truffaut, narwhal Cosby sweater bicycle rights sartorial master cleanse. Tote bag ugh cliche Bushwick mlkshk, YOLO 3 wolf moon flannel jean shorts synth tofu fixie Pitchfork viral selfies. Small batch flexitarian tofu butcher stumptown. Ennui yr fixie PBR, beard cardigan ethnic pug gluten-free Austin +1 occupy photo booth pop-up food truck.</p>
+						</li>
+						<li class="message">
+							<p class="title">Message</p>
+							<p class="body">Polaroid Schlitz VHS narwhal PBR, blog Pitchfork XOXO pickled brunch High Life. Ethnic food truck squid flexitarian cray Tonx, Marfa narwhal Odd Future gentrify typewriter ugh irony. Brunch leggings pug Echo Park, Vice 8-bit paleo Bushwick chia food truck. Sustainable Tumblr Truffaut, narwhal Cosby sweater bicycle rights sartorial master cleanse. Tote bag ugh cliche Bushwick mlkshk, YOLO 3 wolf moon flannel jean shorts synth tofu fixie Pitchfork viral selfies. Small batch flexitarian tofu butcher stumptown. Ennui yr fixie PBR, beard cardigan ethnic pug gluten-free Austin +1 occupy photo booth pop-up food truck.</p>
+						</li>
+					</ul>
 					<!-- COLUMN 1 END [CENTER] -->
 				</div>
 				<div class="col2">
 					<!-- COLUMN 2 START [LEFT] -->
-					<h3 class="red">SEND A NEW MESSAGE</h3>
-					<p>Selfies Helvetica Etsy craft beer, next level PBR&B stumptown typewriter yr kale chips Neutra. PBR&B 90's Bushwick, paleo aesthetic fingerstache umami meh. Fixie semiotics mixtape you probably haven't heard of them. Williamsburg mlkshk pork belly, street art disrupt paleo mixtape. Yr trust fund Odd Future, artisan bespoke tofu polaroid Tonx banh mi master cleanse semiotics cred. Fingerstache direct trade roof party cray forage Wes Anderson. 8-bit Intelligentsia bitters tofu kale chips vegan.</p>
-					<h3>ADMIN</h3>
+					<h3 class="blue">SEND A NEW MESSAGE</h3>
+					<form id="msg_form">
+						List: 
+							<select form="msg_form">
+								<option value="all">All</option>
+								<option value="list1">List1</option>
+							</select>
+						<br/>
+						Content: <br/>
+						<textarea name="content" form="msg_form" cols="39" rows="20">Enter your message here</textarea>
+						<input type="submit" value="Send">
+					</form>
+					<h3 class="green">ADMIN</h3>
+					<h3 class="green edit">Manage Account</h3>
+					<h3 class="green edit">Change Password</h3>
+					<h3 class="green edit">Logout</h3>
 					<!-- COLUMN 2 END [LEFT] -->
 				</div>
 				<div class="col3">
 					<!-- COLUMN 3 START [RIGHT] -->
-					<h3 class="blue">SCHEDULED MESSAGES</h3>
-					<p>Polaroid Schlitz VHS narwhal PBR, blog Pitchfork XOXO pickled brunch High Life. Ethnic food truck squid flexitarian cray Tonx, Marfa narwhal Odd Future gentrify typewriter ugh irony. Brunch leggings pug Echo Park, Vice 8-bit paleo Bushwick chia food truck. Sustainable Tumblr Truffaut, narwhal Cosby sweater bicycle rights sartorial master cleanse. Tote bag ugh cliche Bushwick mlkshk, YOLO 3 wolf moon flannel jean shorts synth tofu fixie Pitchfork viral selfies. Small batch flexitarian tofu butcher stumptown. Ennui yr fixie PBR&B, beard cardigan ethnic pug gluten-free Austin +1 occupy photo booth pop-up food truck.</p>
-					<h3>EDIT</h3>
+					<h3 class="red">SCHEDULED MESSAGES</h3>
+					<div id="scheduled_messages"></div>
+					<ul>
+						<li class="sch_msg">
+							<p class="schedule">To Send: 8/1/2013 @ 2:00pm</p>
+							<p class="schedule">Message: Buffy TONIGHT at 5pm on T2 Big Screen West!</p>
+						</li>
+						<li class="sch_msg">
+							<p class="schedule">To Send: 8/8/2013 @ 2:00pm</p>
+							<p class="schedule">Message: Buffy TONIGHT at 5pm on T2 Big Screen West!</p>
+						</li>
+						<li class="sch_msg">
+							<p class="schedule">To Send: 8/15/2013 @ 2:00pm</p>
+							<p class="schedule">Message: Buffy TONIGHT at 5pm on T2 Big Screen West!</p>
+						</li>
+					</ul>
+					<h3 class="edit dark_red">Add/Edit</h3>
+
+					<h3 class="green">EDIT</h3>
+					<h3 class="green edit">Contacts</h3>
+					<h3 class="green edit">Lists</h3>
 					<!-- COLUMN 3 END [RIGHT] -->
 				</div>
 			</div>

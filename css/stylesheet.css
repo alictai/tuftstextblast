@@ -11,7 +11,7 @@ body {
 /* header formatting */
 h1, h4 {
 	text-align: center;
-	font-size: 30px;
+	font-size: 50px;
 	padding-top: 30px;
 	padding-bottom: 0px;
 	margin-bottom:0px;
@@ -29,12 +29,12 @@ h4 {
 }
 
 p {
-	font-size: 16px;
+	font-size: 17px;
 }
 
 /* background colors */
 .blue {
-	background-color: 3bbec0;
+	background-color: #3bbec0;
 }
 
 .yellow {
@@ -44,6 +44,53 @@ p {
 
 .red {
 	background-color: #e87352;
+	margin-bottom: 2px;
+}
+
+.green {
+	background-color: #3bbec0;
+	margin-bottom: 2px;
+}
+
+.edit {
+	margin: 2px;
+	margin-left: 15px;
+	background-color: #2e9597;
+}
+
+.dark_red {
+	background-color: #cd684c;
+}
+
+/* list formatting */
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+li{
+	list-style-type: none;
+	padding: 10px;
+	padding-top: 1px;
+	margin: 0px;
+	margin-bottom: 2px;
+}
+
+li.message{
+	background-color: rgba(255,255,255,0.5);
+	color: black;
+}
+
+li.sch_msg{
+	background-color: rgba(255,255,255,0.5);
+}
+
+p.schedule{
+	padding: 0px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	margin: 2px;
+	color: black;
 }
 
 /* column container */
