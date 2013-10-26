@@ -32,6 +32,7 @@ class Member {
 		
 	}
 	
+	// Phone Number Must Be Stored as +1xxxxxxxxxx
 	public function add_to_list($list_id, $member_id) {
 		global $db;
 		$db->insert('listlink', array(
