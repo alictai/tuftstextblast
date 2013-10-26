@@ -13,24 +13,40 @@ class Messages {
 		
 	}
 	
-	public function get_messages($list_id) {
-		
+	public function get_messages($organization_id) {
+		global $db;
+		$db->select("SELECT message FROM messages WHERE organization_id = '{$organization_id}';");
 	}
 	
 	public function get_scheduled_messages($list_id) {
-		
+		//THIS WILL NOT EXIST 
 	}
 	
-	public function send_message($message, $list_id) {
-		
+	public function send_message($message, $list_id, $org_id) {
+		global $db;
+
+		$from_r = $db->select("SELECT phone FROM organizations where org_id = '{$org_id}';");
+		$from = $from_r['phone'];
+
+		$members = $db->select("SELECT members.phone FROM members WHERE listlink.list_id = {$list_id} LEFT OUTER JOIN listlink ON (listlink.member_id = member.id);");
+		foreach($members as $member) {
+			$client->account->messages->sendMessage($from, $member['phone'], $message);
+		}
+		$this->store_message($message);
 	}
 	
-	public function store_message($message) {
-		
+	public function store_message($message, $org_id, $list_id) {
+		global $db;
+
+		$db->insert('messages',array(
+			'message' => $message,
+			'list_id' => $list_id,
+			'organization_id' => $org_id
+			));
 	}
 	
 	public function schedule_message($message) {
-		
+		//NOT YET!
 	}
 	
 }

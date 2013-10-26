@@ -44,7 +44,7 @@ class PageAction {
 	static function GetAction() {
 		global $user;
 		
-		if (!isSet($_GET['p'])) { $action = 'home'; }
+		if (!isSet($_GET['p'])) { $action = 'login'; }
 		else if (!is_registered_page_type($_GET['p'])) { $action = '404'; }
 		else { $action = $_GET['p']; }
 		
@@ -64,11 +64,11 @@ class PageAction {
 	}
 	
 	static function CheckAuthorization() {
-		global $page, $user;
+		global $page;
 		
 		if (!$page->login_required) { return true; }
 		
-		if (!$user->is_authorized($page->required_level)) {
+		if (!isSet($_COOKIE['org_id'])) {
 			header('Location: '.SITEPATH.'/?p=login&msg=authreq');
 		}
 		
